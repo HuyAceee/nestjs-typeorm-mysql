@@ -20,7 +20,6 @@ export class AuthController {
 
   @Post('refresh')
   refresh(@Body() body: RefreshTokenBodyDto) {
-    console.log(body);
     return this.authService.refresh(body.refreshToken);
   }
 }
